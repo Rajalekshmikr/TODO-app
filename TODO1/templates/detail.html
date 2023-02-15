@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="shadow card">
+                <div class="card-body">
+                    <h5 class="card-tittle"> {{value.Topic}}</h5>
+                    <p><b>{{value.Imp_level_of_topic}}</b></p>
+                    <p><b>{{value.No_of_revision}}</b></p>
+                     <p><b>{{value.date}}</b></p>
+                    <a class="btn btn-danger" href="{% url 'delete' value.id %}">Done</a>
+                    <a class="btn btn-success" href="{% url 'update' value.id %}">Update</a>
+                </div>
+            </div>
+{% endblock %}
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--{% for i in values %}-->
+<!--{{i.Topic}}-->
+<!--{{i.Imp_level_of_topic}}-->
+<!--{{i.No_of_revision}}-->
+<!--{% endfor %}-->
+<!--</body>-->
+<!--</html>-->
